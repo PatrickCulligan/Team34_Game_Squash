@@ -1,15 +1,17 @@
 package com.Team34.Squash.Model;
 
+//create paddle class
 public class Paddle {
 
+	// create paddle properties
 	private static int paddleX;
 	private static int paddleY;
 	private static int paddleWidth;
 	private static int paddleHeight;
 	private static float paddleSpeed;
 	public static int width;
-	
 
+	// getters and setters
 	public static int getPaddleWidth() {
 		return paddleWidth;
 	}
@@ -39,14 +41,6 @@ public class Paddle {
 		return paddleX;
 	}
 
-	// Collision detection Keep score
-	public void updateCollisionDetection() {
-
-		this.paddleX++;
-
-		// notifyAllObservers();
-	}
-
 	public static int getPaddleX() {
 		return paddleX;
 	}
@@ -66,37 +60,15 @@ public class Paddle {
 	// decrement count and notify all observers
 	public void updateCountMinus() {
 
-		this.paddleX-=Paddle.getPaddleSpeed();
+		this.paddleX -= Paddle.getPaddleSpeed();
 
-		// notifyAllObservers();
 	}
 
 	// Increment count and notify all observers
 	public void updateCount() {
 
-		this.paddleX+=Paddle.getPaddleSpeed();
+		this.paddleX += Paddle.getPaddleSpeed();
 
-		// notifyAllObservers();
 	}
 
-	/*public void paddleConstriant() {
-
-		if (paddleX +(paddleWidth/2) < width) {
-			this.paddleX++;
-		} else if (paddleX > width) {
-			this.paddleX--;
-		}
-
-	}*/
-	/*
-	 * // add changes to the model
-	 * 
-	 * @Override public void attach(Observer observer) {
-	 * observers.add(observer); }
-	 * 
-	 * // notify all observers and update with update method of arraylist
-	 * 
-	 * @Override public void notifyAllObservers() { for (Observer observer :
-	 * observers) { observer.update(count); }
-	 */
 }

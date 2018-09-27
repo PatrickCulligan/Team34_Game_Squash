@@ -1,7 +1,9 @@
 package com.Team34.Squash.Model;
 
+//create ball claee
 public class Ball {
 
+	// create ball properties
 	private static int ballRadius;
 	private static float ballX;
 	private static float ballY;
@@ -9,6 +11,7 @@ public class Ball {
 	private static float dirY;
 	private static float width;
 
+	// getters and setter for ball properties
 	public static int getBallRadius() {
 		return ballRadius;
 	}
@@ -49,11 +52,11 @@ public class Ball {
 		Ball.dirY = dirY;
 	}
 
+	// method to move ball
 	public void BallMovement() {
 		ballY += dirY;
 		ballX += dirX;
 
 	}
-	
 
 }
